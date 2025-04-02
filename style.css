@@ -1,0 +1,116 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1e1e2e;
+    color: white;
+}
+
+header {
+    background-color: #2a2a3a;
+    padding: 15px;
+    text-align: center;
+    font-size: 24px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 10px;
+    background-color: #3a3a4a;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+nav a:hover {
+    background-color: #505060;
+    border-radius: 5px;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+/* News Section */
+#news {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #252535;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.news-item {
+    background-color: #33334a;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.news-item:hover {
+    transform: scale(1.05);
+}
+
+.news-item h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.news-item small {
+    font-size: 14px;
+    color: #aaa;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.news-item p {
+    font-size: 20px;
+    text-align: left;
+}
+
+/* Animations */
+.section {
+    display: none;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+#news {
+    display: block;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header {
+        font-size: 20px;
+    }
+
+    nav a {
+        padding: 8px;
+    }
+
+    .news-item {
+        padding: 15px;
+    }
+
+    .news-item h3 {
+        font-size: 18px;
+    }
+
+    .news-item p {
+        font-size: 14px;
+    }
+}

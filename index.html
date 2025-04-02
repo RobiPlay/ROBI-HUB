@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DM Campaign Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        ROBI HUB
+    </header>
+    <nav>
+        <a href="#" onclick="showSection('news')">Aktualności</a>
+        <a href="#" onclick="showSection('shop')">Sklep</a>
+    </nav>
+    <main>
+        <div id="news" class="section">
+            <h2>Ostatnie Aktualności</h2>
+            <div id="news-articles"></div>
+        </div>
+        <div id="shop" class="section" style="display:none;">
+            <h2>Sklep</h2>
+            <p>Tu będzie Wasz sklep!</p>
+        </div>
+    </main>
+
+    <script src="articles.js"></script> <!-- Linkowanie do pliku JS z artykułami -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const newsContainer = document.getElementById("news-articles");
+            newsContainer.innerHTML = "";
+            if (newsData.length === 0) {
+                newsContainer.innerHTML = "<p>Brak artykułów do wyświetlenia.</p>";
+            } else {
+                newsData.forEach(article => {
+                    const newsItem = document.createElement("div");
+                    newsItem.classList.add("news-item");
+                    newsItem.innerHTML = `
+                        <h3>${article.title}</h3>
+                        <small>${article.date}</small>
+                        <p>${article.content}</p>
+                    `;
+                    newsContainer.appendChild(newsItem);
+                });
+            }
+        });
+
+        function showSection(section) {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(s => s.style.display = 'none');
+            document.getElementById(section).style.display = 'block';
+        }
+    </script>
+</body>
+</html>

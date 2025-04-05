@@ -13,6 +13,7 @@
     <nav>
         <a href="#" onclick="showSection('news')">Aktualności</a>
         <a href="#" onclick="showSection('shop')">Sklep</a>
+        <a href="#" onclick="showSection('library')">Biblioteka</a>
     </nav>
     <main>
         <div id="news" class="section">
@@ -21,13 +22,20 @@
         </div>
         <div id="shop" class="section" style="display:none;">
             <h2>Sklep</h2>
-            <p>Tu będzie Wasz sklep!</p>
+            <div class="campaign-list"></div> <!-- Lista kampanii ładowana dynamicznie -->
+        </div>
+        <div id="library" class="section" style="display:none;">
+            <h2>Twoja Biblioteka</h2>
+            <div class="library-list"></div> <!-- Tu będą załadowane kampanie -->
         </div>
     </main>
 
     <script src="articles.js"></script> <!-- Linkowanie do pliku JS z artykułami -->
+    <script src="campaigns.js"></script> <!-- Linkowanie do pliku JS z kampaniami -->
+    <script src="library.js"></script> <!-- Linkowanie do pliku JS z danymi Biblioteki -->
     <script>
         document.addEventListener("DOMContentLoaded", function() {
+            // News Section
             const newsContainer = document.getElementById("news-articles");
             newsContainer.innerHTML = "";
             if (newsData.length === 0) {
@@ -42,6 +50,59 @@
                         <p>${article.content}</p>
                     `;
                     newsContainer.appendChild(newsItem);
+                });
+            }
+
+            // Shop Section
+            const shopContainer = document.querySelector(".campaign-list");
+
+            // Sprawdzamy, czy dane o kampaniach są dostępne
+            if (campaignsData.length === 0) {
+                shopContainer.innerHTML = "<p>Brak dostępnych kampanii.</p>";
+            } else {
+                campaignsData.forEach(campaign => {
+                    const campaignItem = document.createElement("div");
+                    campaignItem.classList.add("campaign-item");
+
+                    campaignItem.innerHTML = `
+                        <div class="campaign-thumbnail" style="background-image: url('${campaign.image}')"></div>
+                        <div class="campaign-details">
+                            <h3 class="campaign-title">${campaign.title}</h3>
+                            <p class="campaign-price">Cena: ${campaign.price}</p>
+                            <p class="campaign-system">System: ${campaign.system}</p>
+                            <p class="campaign-tags">Tagi: ${campaign.tags}</p>
+                            <p class="campaign-description">${campaign.description}</p>
+                            <button class="full-description" disabled>Pełny opis</button>
+                        </div>
+                    `;
+
+                    shopContainer.appendChild(campaignItem);
+                });
+            }
+
+            // Biblioteka Section
+            const libraryContainer = document.querySelector(".library-list");
+
+            // Sprawdzamy, czy dane o kampaniach są dostępne
+            if (libraryData.length === 0) {
+                libraryContainer.innerHTML = "<p>Brak kampanii w Twojej bibliotece.</p>";
+            } else {
+                libraryData.forEach(campaign => {
+                    const campaignItem = document.createElement("div");
+                    campaignItem.classList.add("library-item");
+
+                    campaignItem.innerHTML = `
+                        <div class="library-thumbnail" style="background-image: url('${campaign.image}')"></div>
+                        <div class="library-details">
+                            <h3 class="library-title">${campaign.title}</h3>
+                            <div class="library-system">
+                                <span class="system-tag">${campaign.system}</span>
+                            </div>
+                            <button class="full-description" disabled>Pełny opis</button>
+                        </div>
+                    `;
+
+                    libraryContainer.appendChild(campaignItem);
                 });
             }
         });

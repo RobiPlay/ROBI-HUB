@@ -1,11 +1,11 @@
 const campaignsData = [
     {
         "title": "Czarnokrew - Black Blood",
-        "price": "200 RP",
+        "price": "300 RP",
         "system": "Scroll 1",
         "tags": "Fantasy, Przygodowa, Walka z Bossami",
         "description": "Przygoda w mrocznej krainie inspirowana grami: Hollow Knight, Shadow of The Colossus, Dark Souls, Undertale.",
-        "image": "path_to_image.jpg"  // Zastąp prawdziwą ścieżką do obrazu
+        "image": "bb.png"  // Zastąp prawdziwą ścieżką do obrazu
     },
     {
         "title": "Ravenburg City",
@@ -13,7 +13,7 @@ const campaignsData = [
         "system": "Scroll 2 ",
         "tags": "Superbohaterskie, Zagadki, Kryminał",
         "description": "Rozwiążcie zagadkę miasta, powstrzymajcie tajemniczego wroga i dorwijcie wszystkich uciekinierów.",
-        "image": "path_to_image.jpg"   // Zastąp prawdziwą ścieżką do obrazu
+        "image": "city.webp"   // Zastąp prawdziwą ścieżką do obrazu
     },
     {
         "title": "SKRIEWE: Peace and War",
@@ -21,7 +21,7 @@ const campaignsData = [
         "system": "Scroll 1",
         "tags": "Fantasy, Przygodowa, Prequel",
         "description": "Akcja toczy się przez 30 lat obu częśći oryginalnej trylogii. Idealne by poznać lub na nowo przeżyć historię.",
-        "image": "path_to_image.jpg"  // Zastąp prawdziwą ścieżką do obrazu
+        "image": "skriewe.webp"  // Zastąp prawdziwą ścieżką do obrazu
     },
     {
         "title": "MvM - Mechs VS Monsters",

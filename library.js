@@ -1,6 +1,6 @@
 const libraryData = [
     {
-        "title": "Attack on Titan - seasons 1-3",
+        "title": "Atak na Tytana - Sezon 1",
         "system": "Scroll 2",
         "rating": "8.0",
         "image": "aot.jpg",  // Zastąp prawdziwą ścieżką do obrazu
@@ -15,5 +15,6 @@ const libraryData = [
     }
     // Możesz dodać więcej kampanii
 ];
+
 
 

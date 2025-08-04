@@ -12,9 +12,17 @@ const libraryData = [
         "rating": "8.5",
         "image": "raven.jpg",  // Zastąp prawdziwą ścieżką do obrazu
         "color": "#28a745"   // zielony
-    }
+    },
+    {
+        "title": "Czarnokrew",
+        "system": "Scroll 1",
+        "rating": "7.8",
+        "image": "bb.png"  // Zastąp prawdziwą ścieżką do obrazu
+        "color": "yellow"   // zielony
+    },
     // Możesz dodać więcej kampanii
 ];
+
 
 
 

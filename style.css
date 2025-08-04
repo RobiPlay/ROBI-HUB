@@ -251,11 +251,11 @@ button.full-description:disabled {
 }
 
 .rating-tag {
-    background-color: #28a745;
     color: white;
     padding: 5px 10px;
     border-radius: 5px;
     font-size: 14px;
     font-weight: bold;
     margin-left: 5px;
+    display: inline-block;
 }

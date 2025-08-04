@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-     <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Robi RPG Hub</title>
-  <meta name="description" content="Strona gdzie będę aktualizował sklep, bibliotekę, aktualności i lore z gier." />
-  <meta name="keywords" content="Robi, Robi hub, rpg, robi hub rpg, robi rpg hub" />
-  <link rel="icon" href="favicon.ico" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DM Campaign Hub</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
 <body>
     <header>
         ROBI HUB
@@ -23,23 +22,23 @@
         </div>
         <div id="shop" class="section" style="display:none;">
             <h2>Sklep</h2>
-            <div class="campaign-list"></div> <!-- Lista kampanii ładowana dynamicznie -->
+            <div class="campaign-list"></div>
         </div>
         <div id="library" class="section" style="display:none;">
             <h2>Wasza Biblioteka</h2>
-            <div class="library-list"></div> <!-- Tu będą załadowane kampanie -->
+            <div class="library-list"></div>
         </div>
     </main>
 
-    <script src="articles.js"></script> <!-- Linkowanie do pliku JS z artykułami -->
-    <script src="campaigns.js"></script> <!-- Linkowanie do pliku JS z kampaniami -->
-    <script src="library.js"></script> <!-- Linkowanie do pliku JS z danymi Biblioteki -->
+    <script src="articles.js"></script>
+    <script src="campaigns.js"></script>
+    <script src="library.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             // News Section
             const newsContainer = document.getElementById("news-articles");
             newsContainer.innerHTML = "";
-            if (newsData.length === 0) {
+            if (typeof newsData === "undefined" || newsData.length === 0) {
                 newsContainer.innerHTML = "<p>Brak artykułów do wyświetlenia.</p>";
             } else {
                 newsData.forEach(article => {
@@ -56,15 +55,12 @@
 
             // Shop Section
             const shopContainer = document.querySelector(".campaign-list");
-
-            // Sprawdzamy, czy dane o kampaniach są dostępne
-            if (campaignsData.length === 0) {
+            if (typeof campaignsData === "undefined" || campaignsData.length === 0) {
                 shopContainer.innerHTML = "<p>Brak dostępnych kampanii.</p>";
             } else {
                 campaignsData.forEach(campaign => {
                     const campaignItem = document.createElement("div");
                     campaignItem.classList.add("campaign-item");
-
                     campaignItem.innerHTML = `
                         <div class="campaign-thumbnail" style="background-image: url('${campaign.image}')"></div>
                         <div class="campaign-details">
@@ -76,34 +72,29 @@
                             <button class="full-description" disabled>Pełny opis</button>
                         </div>
                     `;
-
                     shopContainer.appendChild(campaignItem);
                 });
             }
 
             // Biblioteka Section
             const libraryContainer = document.querySelector(".library-list");
-
-            // Sprawdzamy, czy dane o kampaniach są dostępne
-            if (libraryData.length === 0) {
+            if (typeof libraryData === "undefined" || libraryData.length === 0) {
                 libraryContainer.innerHTML = "<p>Brak kampanii w Twojej bibliotece.</p>";
             } else {
                 libraryData.forEach(campaign => {
                     const campaignItem = document.createElement("div");
                     campaignItem.classList.add("library-item");
-
                     campaignItem.innerHTML = `
                         <div class="library-thumbnail" style="background-image: url('${campaign.image}')"></div>
                         <div class="library-details">
                             <h3 class="library-title">${campaign.title}</h3>
                             <div class="library-system">
                                 <span class="system-tag">${campaign.system}</span>
-                                <span class="system-tag">${campaign.rating}</span>
+                                <span class="rating-tag" style="background-color: ${campaign.color};">${campaign.rating}</span>
                             </div>
                             <button class="full-description" disabled>Pełny opis</button>
                         </div>
                     `;
-
                     libraryContainer.appendChild(campaignItem);
                 });
             }
@@ -117,4 +108,3 @@
     </script>
 </body>
 </html>
-

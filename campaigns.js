@@ -1,13 +1,5 @@
 const campaignsData = [
     {
-        "title": "Czarnokrew - Black Blood",
-        "price": "300 RP",
-        "system": "Scroll 1",
-        "tags": "Fantasy, Przygodowa, Walka z Bossami",
-        "description": "Przygoda w mrocznej krainie inspirowana grami: Hollow Knight, Shadow of The Colossus, Dark Souls, Undertale.",
-        "image": "bb.png"  // Zastąp prawdziwą ścieżką do obrazu
-    },
-    {
         "title": "Ravenburg City",
         "price": "750 RP",
         "system": "Scroll 2 ",
@@ -32,14 +24,6 @@ const campaignsData = [
         "image": "mvm.png"  // Zastąp prawdziwą ścieżką do obrazu
     },
     {
-        "title": "Siege Of The Planet KRELL (part 1)",
-        "price": "300 RP",
-        "system": "Scroll 1",
-        "tags": "Sci-Fi, Wojenne, Ekspansja",
-        "description": "Pewnego dnia budzicie się w mieście oblążonego księżyca.",
-        "image": "krell.jpg"  // Zastąp prawdziwą ścieżką do obrazu
-    },
-    {
         "title": "Nowa Era",
         "price": "300 RP",
         "system": "Scroll 1",
@@ -49,3 +33,4 @@ const campaignsData = [
     }
     // Możesz dodać więcej kampanii
 ];
+

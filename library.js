@@ -17,11 +17,12 @@ const libraryData = [
         "title": "Czarnokrew",
         "system": "Scroll 1",
         "rating": "7.8",
-        "image": "bb.png"  // Zastąp prawdziwą ścieżką do obrazu
+        "image": "bb.png",  // Zastąp prawdziwą ścieżką do obrazu
         "color": "yellow"   // zielony
     },
     // Możesz dodać więcej kampanii
 ];
+
 
 
 

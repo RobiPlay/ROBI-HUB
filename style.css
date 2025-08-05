@@ -244,14 +244,14 @@ button.full-description:disabled {
 
 .system-tag {
     background-color: #505060;
-    color: black;
+    color: white;
     padding: 5px 10px;
     border-radius: 5px;
     font-size: 14px;
 }
 
 .rating-tag {
-    color: white;
+    color: black;
     padding: 5px 10px;
     border-radius: 5px;
     font-size: 14px;
@@ -259,5 +259,6 @@ button.full-description:disabled {
     margin-left: 5px;
     display: inline-block;
 }
+
 
 

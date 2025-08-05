@@ -251,7 +251,7 @@ button.full-description:disabled {
 }
 
 .rating-tag {
-    color: black;
+    color: white;
     padding: 5px 10px;
     border-radius: 5px;
     font-size: 14px;
@@ -259,4 +259,5 @@ button.full-description:disabled {
     margin-left: 5px;
     display: inline-block;
 }
+
 

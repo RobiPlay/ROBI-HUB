@@ -14,7 +14,7 @@ const libraryData = [
         "color": "#28a745"   // zielony
     },
     {
-        "title": "Czarnokrew",
+        "title": "Czarnokrew Blackblood",
         "system": "Scroll 1",
         "rating": "7.8",
         "image": "bb.png",  // Zastąp prawdziwą ścieżką do obrazu
@@ -22,6 +22,7 @@ const libraryData = [
     },
     // Możesz dodać więcej kampanii
 ];
+
 
 
 

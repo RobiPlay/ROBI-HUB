@@ -1,19 +1,12 @@
 const campaignsData = [
-    {
-        "title": "Ravenburg City",
-        "price": "750 RP",
-        "system": "Scroll 2 ",
-        "tags": "Superbohaterskie, Zagadki, Kryminał",
-        "description": "Rozwiążcie zagadkę miasta, powstrzymajcie tajemniczego wroga i dorwijcie wszystkich uciekinierów.",
-        "image": "city.webp"   // Zastąp prawdziwą ścieżką do obrazu
-    },
+ 
     {
         "title": "SKRIEWE: Peace and War",
         "price": "100 RP",
         "system": "Scroll 1",
         "tags": "Fantasy, Przygodowa, Prequel",
         "description": "Akcja toczy się przez 30 lat obu częśći oryginalnej trylogii. Idealne by poznać lub na nowo przeżyć historię.",
-        "image": "skriewe.webp"  // Zastąp prawdziwą ścieżką do obrazu
+        "image": "images/skriewe.webp"  // Zastąp prawdziwą ścieżką do obrazu
     },
     {
         "title": "MvM - Mechs VS Monsters",
@@ -21,16 +14,17 @@ const campaignsData = [
         "system": "Scroll 2",
         "tags": "Bitwy, Misje, Budowa wyposażenia",
         "description": "Modyfikujcie mechy i brońcie planety przed potworami z kosmosu.",
-        "image": "mvm.png"  // Zastąp prawdziwą ścieżką do obrazu
+        "image": "images/mvm.png"  // Zastąp prawdziwą ścieżką do obrazu
     },
     {
-        "title": "Nowa Era",
-        "price": "300 RP",
-        "system": "Scroll 1",
-        "tags": "PostApo, Survival, Otwarty Świat",
-        "description": "Tysiąc lat po apokalipsie, nadszedł świt dla nowego okresu  ziemii.",
-        "image": "nowa-era.png" // Zastąp prawdziwą ścieżką do obrazu
-    }
+        "title": "Return To The Dungeon",
+        "price": "1000 RP",
+        "system": "Scroll 3",
+        "tags": "Mystery, Horror, Realism",
+        "description": "Czas wrócić do lochu...",
+        "image": "images/dungeon.webp"
+    },
+    
     // Możesz dodać więcej kampanii
 ];
 
